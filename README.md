@@ -1,15 +1,18 @@
 # 🏠 California House Price Predictor
 
-This is a machine learning project that predicts house prices in California using a trained XGBoost model. It includes:
+A complete end-to-end machine learning project that predicts house prices in California using XGBoost. The project includes:
 
-- 📊 Data preprocessing and feature engineering
-- 📈 Model training with hyperparameter tuning using GridSearchCV
-- 🌐 FastAPI backend for real-time predictions
-- 🎨 Streamlit frontend for user-friendly interaction
+- 📊 Exploratory Data Analysis (EDA) and feature engineering  
+- 🧠 Model training & tuning with GridSearchCV  
+- ⚙️ Backend API using FastAPI  
+- 🎨 Frontend interface with Streamlit  
+- ☁️ Deployed to [Streamlit Cloud](https://california-house-price-predictor-azzhpixhrzfjpvhnn4tfrg.streamlit.app/)
 
 ---
 
 ## 📁 Project Structure
+
+```
 house-price-predictor/
 ├── backend/               # Model training, evaluation, and preprocessing code
 ├── data/                  # Raw and processed datasets
@@ -20,6 +23,8 @@ house-price-predictor/
 ├── eda.ipynb              # Jupyter notebook for EDA & feature engineering
 ├── requirements.txt       # Required Python packages
 └── xgboost_model.pkl      # Final trained model (XGBoost)
+```
+
 ---
 
 ## 🚀 Installation
@@ -29,41 +34,73 @@ house-price-predictor/
 ```bash
 git clone https://github.com/leventtcaan/california-house-price-predictor.git
 cd california-house-price-predictor
+```
 
-2. Install dependencies:
+2. **Install the dependencies:**
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the Streamlit app:
+3. **Run the Streamlit app:**
+
+```bash
 streamlit run app.py
+```
 
-🧠 How It Works
-	•	main.py: Loads the trained model and serves predictions via a FastAPI backend.
-	•	app.py: Interactive Streamlit frontend that collects user input and displays predictions.
-	•	xgboost_model.pkl: Trained XGBoost model stored via joblib.
+---
 
-🌍 Try the Live App
-👉 https://california-house-price-predictor-azzhpixhrzfjpvhnn4tfrg.streamlit.app/
+## 🌟 Features
 
-💡 Features
-	•	One-click predictions using an interactive form
-	•	Real-time feedback
-	•	Feature importance visualization (based on model weights)
-	•	Input explanations (e.g., median_income is scaled ×1000)
+- Real-time house price prediction based on user input  
+- Feature importance chart (XGBoost built-in)  
+- Input validations and explanations (e.g., `median_income` is scaled ×1000)  
+- Visual UI with Streamlit (map, sidebar, form, prediction card)  
+- GridSearchCV used to optimize model hyperparameters  
+- Fully deployed app on Streamlit Cloud
 
-📊 Model Performance
-	•	Best model: XGBoost Regressor
-	•	RMSE: ~46,680
-	•	R² Score: ~0.84
-	•	Tuned using GridSearchCV
+---
 
-🤝 Contributions
+## 🔗 Live Demo
 
-Feel free to open issues or submit pull requests!
+👉 [Try the live app here!](https://california-house-price-predictor-azzhpixhrzfjpvhnn4tfrg.streamlit.app/)
 
-📝 License
+---
 
-This project is licensed under the MIT License.
+## 📊 Model Performance
 
-📌 Note (Türkçe)
+- **Best Model:** XGBoost Regressor  
+- **R² Score:** 0.84  
+- **RMSE:** ~46,680  
+- Parameters tuned using `GridSearchCV`  
+- Evaluated against multiple regression algorithms (Linear, RF, DT, GBM)
 
-Bu proje, Kaliforniya’daki ev fiyatlarını tahmin eden bir makine öğrenimi modeli ve Streamlit arayüzü içermektedir. Daha fazla bilgi için yukarıdaki İngilizce açıklamalara göz atabilirsiniz.
+---
+
+## 💡 Technologies Used
+
+- Python  
+- Pandas, NumPy, Matplotlib  
+- Scikit-learn, XGBoost  
+- FastAPI  
+- Streamlit  
+- Git & GitHub
+
+---
+
+## 🤝 Contributions
+
+This project is open for feedback, improvement, and collaboration. Feel free to fork, star, and open issues or PRs!
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📌 Note (Türkçe)
+
+Bu proje, Kaliforniya'daki ev fiyatlarını tahmin eden bir makine öğrenimi modeli ve Streamlit arayüzü içermektedir. Daha fazla bilgi için yukarıdaki İngilizce açıklamalara göz atabilirsiniz.
+
