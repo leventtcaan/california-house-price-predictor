@@ -11,15 +11,15 @@ This is a machine learning project that predicts house prices in California usin
 
 ## 📁 Project Structure
 house-price-predictor/
-├── backend/
-├── data/
-├── frontend/
-├── model/
-├── app.py
-├── main.py
-├── requirements.txt
-├── eda.ipynb
-└── xgboost_model.pkl
+├── backend/               # Model training, evaluation, and preprocessing code
+├── data/                  # Raw and processed datasets
+├── frontend/              # Streamlit UI (optional split)
+├── model/                 # Serialized ML models
+├── app.py                 # Streamlit main app
+├── main.py                # FastAPI backend for prediction
+├── eda.ipynb              # Jupyter notebook for EDA & feature engineering
+├── requirements.txt       # Required Python packages
+└── xgboost_model.pkl      # Final trained model (XGBoost)
 ---
 
 ## 🚀 Installation
@@ -30,8 +30,11 @@ house-price-predictor/
 git clone https://github.com/leventtcaan/california-house-price-predictor.git
 cd california-house-price-predictor
 
-2. **Install dependencies:**
+2. Install dependencies:
 pip install -r requirements.txt
+
+3. Run the Streamlit app:
+streamlit run app.py
 
 🧠 How It Works
 	•	main.py: Loads the trained model and serves predictions via a FastAPI backend.
