@@ -6,11 +6,11 @@ import numpy as np
 # Uygulama oluştur
 app = FastAPI()
 
-# Modeli yükle
+# Upload Model
 model = joblib.load("xgboost_model.pkl")
 
 
-# Girdi veri modeli
+# Input Data Model
 class HouseFeatures(BaseModel):
     longitude: float
     latitude: float
@@ -43,6 +43,6 @@ def predict_price(features: HouseFeatures):
                       features.ocean_proximity_NEAR_OCEAN,
                       features.rooms_per_household]])
 
-    # Tahmin yap
+    # Predict
     prediction = model.predict(data)
     return {"predicted_price": round(float(prediction[0]), 2)}
